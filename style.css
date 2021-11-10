@@ -1,0 +1,101 @@
+#base {
+    background: red;
+    display: inline-block;
+    height: 55px;
+    margin-left: 20px;
+    margin-top: 55px;
+    position: absolute;
+    width: 100px;
+
+    bottom: 10%;
+    left: 45%;
+  }
+  #base:before {
+    border-bottom: 35px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: -35px;
+    width: 0;
+  }
+
+
+body{
+    /* background-color: black; */
+    margin: 0px;
+    max-width: 100vw;
+}
+
+#contenedor-estrellas{
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+}
+
+#cuadrado{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    
+    margin: 0px;
+    padding: 0px;
+    bottom: 30%;
+    
+}
+
+@keyframes brillo1 {
+    /* 0%   {box-shadow: 0px 0px 5px .1px white;} */
+    25%  {box-shadow: 0px 0px 5px .5px white;}
+    50%  {box-shadow: 0px 0px 5px 1px white;}
+    75%  {box-shadow: 0px 0px 5px 1.5px white;}
+    100% {box-shadow: 0px 0px 5px 2px white;}
+}
+
+
+@keyframes brillo2 {
+    /* 0%   {box-shadow: 0px 0px 5px .1px white;} */
+    25%  {box-shadow: 0px 0px 5px 1px white;}
+    50%  {box-shadow: 0px 0px 5px 1.5px white;}
+    /* 100% {box-shadow: 0px 0px 5px 1.5px white;} */
+}
+
+
+
+
+
+.estrella{
+    background-color: white;
+    box-shadow: 0px 0px 5px .3px white;
+    border-radius: 100%;
+
+    margin: 0px;
+    padding: 0px;
+    z-index: 0;
+    /* display: inline; ESTO HACE UN EFECTO PIOLA con inline y el heigh contendor a 0px  */
+}
+
+
+.brillo1{
+    animation-name: brillo1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.brillo2{
+    animation-name: brillo2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+
+
+
+
